@@ -1,25 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className={'w-screen min-h-screen flex items-center justify-center'}>
+            <div className={'flex m-auto'}>
+                <a href={''}
+                   className={'cursor-pointer transition hover:bg-red-800 py-7 px-9 rounded-xl flex items-center justify-center bg-red-600 text-zinc-50 font-bold text-6xl'}>
+                    PLAY DFS!!!!
+                </a>
+            </div>
+        </div>
+    );
 }
 
 export default App;
