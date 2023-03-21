@@ -9,7 +9,7 @@ export function getApi() {
     }
 
     return axios.create({
-        baseURL: 'http://localhost:5000/api',
+        baseURL: 'https://test-bo-api.onrender.com/api',
         headers,
     });
 }
