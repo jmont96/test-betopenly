@@ -21,10 +21,7 @@ function App() {
       const token = (await getToken(user._id)).data;
       console.log({ token });
       localStorage.setItem("token", token.token);
-      window.open(
-        "https://phantasia-frontend-staging.vercel.app/login?redirect=/home",
-        "_blank"
-      );
+      window.open("http://localhost:3000/login?redirect=/home", "_blank");
     } catch (e) {
       console.error(e);
     }
@@ -32,7 +29,7 @@ function App() {
 
   useEffect(() => {
     async function handleMessage(e) {
-      if (e.origin !== "http://localhost:3000/login") {
+      if (e.origin !== "http://localhost:3000") {
         return;
       }
       const token = localStorage.getItem("token");
@@ -41,7 +38,7 @@ function App() {
       parent.postMessage(
         { key: "token", value: token },
         // "https://phantasia-frontend-staging.vercel.app"
-        "http://localhost:3000/login"
+        "http://localhost:3000"
       );
     }
 
