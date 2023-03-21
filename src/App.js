@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     async function handleMessage(e) {
-      if (e.origin !== "https://phantasia-frontend-staging.vercel.app") {
+      if (e.origin !== "http://localhost:3000/login") {
         return;
       }
       const token = localStorage.getItem("token");
@@ -40,7 +40,8 @@ function App() {
       console.log("Posting Message", { key: "token", value: token });
       parent.postMessage(
         { key: "token", value: token },
-        "https://phantasia-frontend-staging.vercel.app"
+        // "https://phantasia-frontend-staging.vercel.app"
+        "http://localhost:3000/login"
       );
     }
 
